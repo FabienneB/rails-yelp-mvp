@@ -1,3 +1,33 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.row-size {
+  width : 900px;
+}
+
+.list-colored  a{
+  color: #476268;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration:none;
+    opacity: 0.6;
+  }
+}
+
+.text-colored h1, h3, ul{
+  color:  #476268;
+}
+
+.text-colored h3 {
+  font-size: 20px;
+}
+
+.text-colored h1 {
+  font-weight: bolder;
+  font-size: 25px;
+}
+

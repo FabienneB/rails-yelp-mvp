@@ -1,22 +1,35 @@
 
-<% @restaurants.each do |restaurant| %>
+<div class="container">
+  <div class="row">
 
-<ul>
-  <li>
-    Name :
-    <%= link_to restaurant.name,  restaurant_path(restaurant.id) %> -
-    Address :
-    <%= restaurant.address %> -
-    Phone number :
-    <%= restaurant.phone_number %> -
-    Category :
-    <%= restaurant.category %>
-    <%= link_to "Edit", edit_restaurant_path(restaurant)  %>
-    <%= link_to "Delete", restaurant_path(restaurant), method: :delete  %>
+    <div class="col-md-9 col-md-offset-2">
 
-  </li>
-</ul>
-<% end %>
+    <% @restaurants.each do |restaurant| %>
 
-<%= link_to "Add a restaurant", new_restaurant_path  %>
+    <ul class = "list-unstyled list-colored">
+      <li>
+        <i> Name : </i>
+        <%= link_to restaurant.name,  restaurant_path(restaurant.id) %> -
+        <i> Address : </i>
+        <%= restaurant.address %> -
+        <i> Phone number : </i>
+        <%= restaurant.phone_number %> -
+        <i> Category : </i>
+        <%= restaurant.category %>
+        <%= link_to edit_restaurant_path(restaurant) do %>
+          <i class="fa fa-pencil"></i>
+        <% end %>
+        <%= link_to restaurant_path(restaurant), method: :delete  do %>
+          <i class="fa fa-times"></i>
+        <% end %>
+      </li>
+    </ul>
+    <% end %>
 
+    <div class = "text-center list-colored">
+      <%= link_to "Add a restaurant", new_restaurant_path, class: "btn btn-success" %>
+    </div>
+
+    </div>
+  </div>
+</div>
