@@ -3,15 +3,19 @@
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
 
-      <div class="text-colored">
+      <div class="table text-colored">
         <h1>Restaurant <%= @restaurant.name %></h1>
+          <div class="product">
+            <div class="product-body">
+              <h3><i> Where can I find it ? </i> </h3>
+              <p><%= @restaurant.address %></p>
+              <h1><i> Number : </i> </h1>
+              <p><%= @restaurant.phone_number %></p>
+              <h1> <i> Type of food </i> </h1>
+              <p><%= @restaurant.category %></p>
+            </div>
+          </div>
 
-         <h1><i> Where can I find it ? </i> </h1>
-        <h3><%= @restaurant.address %></h3>
-         <h1><i> Number : </i> </h1>
-        <h3><%= @restaurant.phone_number %></h3>
-         <h1> <i> Type of food </i> </h1>
-        <h3><%= @restaurant.category %></h3>
 
       <h1> <i>Reviews : </i> </h1>
       <ul class = "list-unstyled">
@@ -25,8 +29,4 @@
     </div>
   </div>
 </div>
-
-
-
-
 
